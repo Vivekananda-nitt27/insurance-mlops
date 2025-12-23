@@ -1,0 +1,143 @@
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Page Background ===== */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ===== Main Card Container ===== */
+.container {
+    width: 100%;
+    max-width: 520px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 35px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ===== Heading ===== */
+.container h1 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #1d2671;
+    font-weight: 700;
+}
+
+/* ===== Form Layout ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* ===== Labels ===== */
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* ===== Inputs ===== */
+input {
+    padding: 10px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #1d2671;
+    box-shadow: 0 0 0 2px rgba(29, 38, 113, 0.15);
+}
+
+/* ===== Predict Button ===== */
+button {
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== Train Button ===== */
+.train-button {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.train-button:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== Result Section ===== */
+.result {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f0f6ff;
+    text-align: center;
+    animation: slideUp 0.6s ease-in-out;
+}
+
+.result h2 {
+    color: #1d2671;
+    font-size: 18px;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px 20px;
+    }
+
+    .container h1 {
+        font-size: 22px;
+    }
+}
